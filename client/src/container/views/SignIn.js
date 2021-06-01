@@ -4,12 +4,18 @@ import {Card,Divider} from 'semantic-ui-react'
 import SignInForm from "../components/SignInForm";
 import {signIn} from "../../store/actions";
 import {useDispatch} from "react-redux";
+import {useHistory} from "react-router-dom";
 
 
 const SignIn = (props) => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+
+    if(props.loggedIn) {
+        history.push('/dashboard');
+    }
 
     const renderError = () => {
         if (error !== '') {
@@ -20,6 +26,7 @@ const SignIn = (props) => {
     const onSubmit = (values) => {
         setLoading(true);
         dispatch(signIn(values));
+        history.push('/dashboard');
     }
 
     return (

@@ -7647,10 +7647,11 @@ h2 {
 
 .btnCommon,
 .ui .button {
-    height: 44px;
+    /*height: 44px;*/
     display: inline-block;
-    line-height: 44px;
-    padding: 0 25px;
+    /*line-height: 44px;*/
+    /*padding: 0 25px;*/
+    padding: .375rem .75rem;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     font-size: 15px;
@@ -7673,12 +7674,13 @@ h2 {
 .btnPrimary,
 .ui .button {
     color: #fff;
-    background: linear-gradient(130deg, #fc00ff, #0097de); }
+    background: #0d6efd; }
 
 .btnPrimary:hover,
 .ui .button:hover {
     color: #fff;
-    background: linear-gradient(130deg, #b84eb9, #0986c1); }
+    background-color: #0b5ed7;
+    border-color: #0a58ca;}
 
 .authForm {
     max-width: 500px;

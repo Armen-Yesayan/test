@@ -1,4 +1,4 @@
-import {Body, Controller, Post, UseGuards} from '@nestjs/common';
+import {Body, Controller, Get, Post, UseGuards} from '@nestjs/common';
 import {DatabaseDto} from "./dto/database.dto";
 import {DatabaseService} from "./database.service";
 import {JwtAuthGuard} from "../auth/jwt-auth.guard";
@@ -7,6 +7,12 @@ import {JwtAuthGuard} from "../auth/jwt-auth.guard";
 export class DatabaseController {
 
     constructor(private readonly databaseServer: DatabaseService) {}
+
+    @UseGuards(JwtAuthGuard)
+    @Get()
+    allDB() {
+        return this.databaseServer.allDB();
+    }
 
     @UseGuards(JwtAuthGuard)
     @Post('/create')

@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <div className='main col-md-10'>
                     <div className='fluid-container'>
                         <Route exact path='/dashboard' component={Main} />
-                        <Route exact path='/create-database' render={CreateDatabase} />
+                        <Route exact path='/create-database' component={CreateDatabase} />
                     </div>
                 </div>
             </div>

@@ -1,11 +1,13 @@
 import axios from "axios";
 
 export const Api = axios.create({
-    baseURL: 'http://localhost:5000/api'
+    baseURL: 'http://localhost:5000/api',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('jwt_token')}`
+    },
+
 })
-
-axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.jwt_token}`;
-
 
 export const AuthApi = {
     async signInWithEmailAndPassword(email, password) {
@@ -13,6 +15,25 @@ export const AuthApi = {
             Api.post('/auth/login', {email, password})
                 .then(response => {
                     return response.data;
+                })
+        )
+    }
+}
+
+export const DatabaseApi = {
+    async allDatabase() {
+        return (
+            Api.get('/database')
+                .then(response => {
+                    return response.data
+                })
+        )
+    },
+    async createDB(name) {
+        return (
+            Api.post('/database/create', {name})
+                .then(response => {
+                    return response.data
                 })
         )
     }

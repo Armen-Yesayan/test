@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import * as bcrypt from 'bcryptjs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -7,6 +8,8 @@ async function bootstrap() {
   app.setGlobalPrefix('api')
   app.enableCors();
 
-  await app.listen(PORT, () => console.log(`Server started on PORT - ${PORT}`));
+  const pas = await bcrypt.hash('admin', 5)
+
+  await app.listen(PORT, () => console.log(`Server started on PORT - ${PORT}`, pas));
 }
 bootstrap();

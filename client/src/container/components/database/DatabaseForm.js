@@ -1,18 +1,30 @@
 import React, {useState} from 'react';
-import {Button, Form, Input, Label} from "semantic-ui-react";
+import {Button, Card, Form, Input, Label} from "semantic-ui-react";
 
-const DatabaseForm = () => {
+const DatabaseForm = ({onSubmit}) => {
     const [error, setError] = useState();
+    const [name, setName] = useState('')
 
-    const changeHandle = () => {
+    const changeHandle = (e) => {
+        setName(e.target.value);
+    }
 
+    const preSubmit = (e) => {
+        if(!name) {
+            setError('Required')
+        }else if(name.length < 3) {
+            setError('Min 3 characters')
+        } else {
+            setError('')
+            onSubmit(name)
+        }
     }
 
     return (
         <div className='container'>
-            <div className='col-lg-6 col-md-6 col-sm-3 mx-auto'>
-                <Form>
-                    <div className='form-group'>
+            <div className='col-lg-4 mt-4'>
+                <Form className="d-flex align-items-center justify-content-between">
+                    <div className='form-group' style={{marginBottom: 0}}>
                         <Label>Name</Label>
                         <Input
                             name='name'
@@ -23,8 +35,12 @@ const DatabaseForm = () => {
                     </div>
                     <Button
                         className='btnPrimary'
-                        type='submit'>Submit</Button>
+                        type='button'
+                        onClick={preSubmit}
+                    >Submit</Button>
                 </Form>
+
+
             </div>
         </div>
     );

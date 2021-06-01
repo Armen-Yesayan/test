@@ -1,4 +1,4 @@
-import {Route, Redirect } from "react-router-dom";
+import {Route, Redirect} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import SignIn from "./views/SignIn";
 import {useEffect} from "react";
@@ -10,6 +10,7 @@ const App = () => {
     const loggedIn = useSelector(state => state.auth.loggedIn);
     const dispatch = useDispatch();
 
+
     useEffect(() => {
         if(localStorage.getItem('jwt_token')) {
             dispatch(logIn());
@@ -17,12 +18,11 @@ const App = () => {
     }, [])
 
     const PublicRoute = ({ component: Component, authed, ...rest }) => {
-        console.log('asd')
         return (
             <Route
                 {...rest}
                 render={props => authed === false
-                    ? <Component {...props} />
+                    ? <Component {...props} loggedIn={authed} />
                     : <Redirect to='/dashboard' />}
             />
         );
@@ -41,13 +41,14 @@ const App = () => {
 
     return (
         <div>
-            {!loggedIn && <PublicRoute
-                authed={loggedIn} path='/' component={SignIn}/>
-            }
             {
                 loggedIn && privetRoute.map((value, index) => {
                     return <ProtectedRoute authed={loggedIn} path={value.path} component={Dashboard} key={index}/>
                 })
+            }
+            {
+                !loggedIn && <PublicRoute
+                    authed={loggedIn} path='/' component={SignIn}/>
             }
         </div>
     );
