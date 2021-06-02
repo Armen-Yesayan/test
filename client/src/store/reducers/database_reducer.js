@@ -9,7 +9,7 @@ const database = (state = initialState, action) => {
     switch (action.type) {
         case ALL_DATABASE: {
             return {
-                dbs: state.dbs.concat([action.payload])
+                dbs: action.payload
             }
         }
         case CREATE_DATABASE: {

@@ -4,5 +4,8 @@ export const privetRoute = [
     },
     {
         path: '/create-database'
+    },
+    {
+        path: '/database/:id'
     }
 ]

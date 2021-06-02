@@ -1,12 +1,12 @@
 import React from 'react';
 import HCard from "./HCard";
 
-const Overview = () => {
+const Overview = ({dbsLength}) => {
     return (
         <section className='overview'>
             <div className='row'>
                 <div className='col-sm-3'>
-                    <HCard iconName='database' backgroundColor='tealBG' label='Database' number={42356} />
+                    <HCard iconName='database' backgroundColor='tealBG' label='Database' number={dbsLength} />
                 </div>
                 <div className='col-sm-3'>
                     <HCard iconName='tags' backgroundColor='pinkBG' label='products' number={1256} />

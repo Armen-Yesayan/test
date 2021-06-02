@@ -10,7 +10,7 @@ const Menu = () => {
             </div>
             <ul>
                 <MenuItem link='/dashboard' linkText='Dashboard' iconName='home'/>
-                <MenuItem link='/create-database' linkText='Create Database' iconName='database'/>
+                <MenuItem link='/create-database' linkText='Database' iconName='database'/>
             </ul>
         </div>
     );

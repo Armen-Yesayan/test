@@ -1,15 +1,14 @@
-import {Route, Redirect} from "react-router-dom";
+import {Route, Redirect, useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import SignIn from "./views/SignIn";
 import {useEffect} from "react";
-import {logIn} from "../store/actions";
+import {allDatabase, logIn} from "../store/actions";
 import Dashboard from "./views/Dashboard";
 import {privetRoute} from "../routes";
 
 const App = () => {
     const loggedIn = useSelector(state => state.auth.loggedIn);
     const dispatch = useDispatch();
-
 
     useEffect(() => {
         if(localStorage.getItem('jwt_token')) {

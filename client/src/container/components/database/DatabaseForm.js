@@ -25,19 +25,19 @@ const DatabaseForm = ({onSubmit}) => {
             <div className='col-lg-4 mt-4'>
                 <Form className="d-flex align-items-center justify-content-between">
                     <div className='form-group' style={{marginBottom: 0}}>
-                        <Label>Name</Label>
                         <Input
                             name='name'
                             type='text'
+                            placeholder='Database name'
                             onChange={changeHandle}
                         />
                         <span style={{color: 'red'}}>{error}</span>
                     </div>
                     <Button
-                        className='btnPrimary'
+                        primary
                         type='button'
                         onClick={preSubmit}
-                    >Submit</Button>
+                    >Create</Button>
                 </Form>
 
 

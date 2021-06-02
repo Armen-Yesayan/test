@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="262316bc-e107-474f-baf2-85a0bf6fb931" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/Api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/container/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/container/components/AccountMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/components/AccountMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/container/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/components/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/container/components/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/components/Overview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/container/components/database/DatabaseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/components/database/DatabaseForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/container/views/CreateDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/views/CreateDatabase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/container/views/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/views/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/container/views/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/views/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/database/database.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/database/database.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/database/database.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/database/database.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/container/views/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/container/views/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/reducers/database_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/reducers/database_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\Asus\Desktop\Projects\test\server\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -84,6 +86,7 @@
       <workItem from="1622571926188" duration="54000" />
       <workItem from="1622572013615" duration="138000" />
       <workItem from="1622572229609" duration="6131000" />
+      <workItem from="1622614561481" duration="5985000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from "./Root";
 import './styles/index.css';
 import 'font-awesome/css/font-awesome.min.css';
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
